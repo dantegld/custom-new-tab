@@ -17,8 +17,7 @@
             bar.setAttribute('aria-valuenow', Math.round(p));
         }
 
-        // Initial update
-        update();
+        setTimeout(update, 100)
 
         // Align updates to the next minute, then update every minute
         const now = new Date();
