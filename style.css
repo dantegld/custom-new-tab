@@ -64,14 +64,15 @@ body {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(49, 39, 39, 0.25);
     opacity: 0;
-    pointer-events: none;
     transition: opacity 160ms ease, transform 160ms ease;
     white-space: nowrap;
     z-index: 10000;
 }
 
 /* Show tooltip when the progress bar is hovered (doesn't follow cursor) */
-#day-progress:hover + #day-tooltip {
+#day-progress:hover ~ #day-tooltip,
+#day-tooltip:hover {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+    cursor: default;
 }
